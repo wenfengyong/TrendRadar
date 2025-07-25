@@ -1,12 +1,9 @@
-京东
-刘强东
-
-字节
-张一鸣
+Tiktok
+Meta
+Google
 
 小米
 雷军
-xiaomi
 
 马斯克
 特斯拉
@@ -30,11 +27,9 @@ claude
 Anthropic
 
 苹果
-库克
 iphone
-ipad
-mac
-ios
+华为
++发布
 
 ai
 !gai
@@ -43,20 +38,8 @@ ai
 汽车
 自动驾驶
 
-
-国产
-中国
-美国
-
 芯片
 光刻机
-
-科技
-
-核能
-
-新质生产力
-
 
 股市
 投资
