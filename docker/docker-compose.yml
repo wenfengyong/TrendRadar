@@ -5,7 +5,8 @@ services:
       dockerfile: docker/Dockerfile
     container_name: trend-radar
     restart: unless-stopped
-
+    ports:
+      - "9020:9020"  # 暴露 API 端口
     volumes:
       - ../config:/app/config:ro
       - ../output:/app/output
@@ -20,3 +21,4 @@ services:
       - CRON_SCHEDULE=${CRON_SCHEDULE:-*/5 * * * *}
       - RUN_MODE=${RUN_MODE:-cron}
       - IMMEDIATE_RUN=${IMMEDIATE_RUN:-true}
+      - ENABLE_API=${ENABLE_API:-true}  # 控制是否启用 API

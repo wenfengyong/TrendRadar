@@ -7,6 +7,12 @@ if [ ! -f "/app/config/config.yaml" ] || [ ! -f "/app/config/frequency_words.txt
     exit 1
 fi
 
+# 启动 API 服务（如果启用）
+if [ "${ENABLE_API}" = "true" ]; then
+    echo "🚀 启动 API 服务..."
+    python api.py &
+fi
+
 # 保存环境变量
 env >> /etc/environment
 
