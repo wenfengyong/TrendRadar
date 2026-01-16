@@ -14,7 +14,7 @@ app:
   #   - Europe/London (伦敦时间 UTC+0/+1)
   # 完整时区列表: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   timezone: "Asia/Shanghai"
-  show_version_update: true           # 显示版本更新提示
+  show_version_update: false           # 显示版本更新提示
 
 
 # ===============================================================
@@ -26,26 +26,24 @@ app:
 platforms:
   - id: "toutiao"
     name: "今日头条"
-  - id: "baidu"
-    name: "百度热搜"
   - id: "wallstreetcn-hot"
     name: "华尔街见闻"
   - id: "thepaper"
     name: "澎湃新闻"
-  - id: "bilibili-hot-search"
-    name: "bilibili 热搜"
   - id: "cls-hot"
     name: "财联社热门"
   - id: "ifeng"
     name: "凤凰网"
-  - id: "tieba"
-    name: "贴吧"
-  - id: "weibo"
-    name: "微博"
-  - id: "douyin"
-    name: "抖音"
-  - id: "zhihu"
-    name: "知乎"
+  - id: "gelonghui"
+    name: "格隆汇"
+  - id: "fastbull-news"
+    name: "法布财经"
+  - id: "cankaoxiaoxi"
+    name: "参考消息"
+  - id: "sputniknewscn"
+    name: "卫星通讯社"
+  - id: "cls-telegraph"
+    name: "财联社-电报"
 
 
 # ===============================================================
@@ -164,9 +162,9 @@ notification:
   #       如果想要精准的定时推送，建议使用 Docker 部署在个人服务器上
   push_window:
     enabled: false                    # 是否启用推送时间窗口控制
-    start: "20:00"                    # 开始时间（北京时间）
-    end: "22:00"                      # 结束时间（北京时间）
-    once_per_day: true                # true=窗口内只推送一次，false=窗口内每次执行都推送
+    start: "07:00"                    # 开始时间（北京时间）
+    end: "23:00"                      # 结束时间（北京时间）
+    once_per_day: false                # true=窗口内只推送一次，false=窗口内每次执行都推送
 
   # 📋 独立展示区配置（可选功能）
   # 用途：将指定平台的完整热榜/RSS 单独展示，不受关键词过滤影响
@@ -240,7 +238,7 @@ storage:
   # 本地存储配置
   local:
     data_dir: "output"                # 数据目录
-    retention_days: 0                 # 保留天数（0=永久保留）
+    retention_days: 30                 # 保留天数（0=永久保留）
 
   # 远程存储配置（S3 兼容协议）
   # 支持: Cloudflare R2, 阿里云 OSS, 腾讯云 COS, AWS S3, MinIO 等
@@ -271,7 +269,7 @@ storage:
 # 支持 OpenAI、Anthropic、DeepSeek等兼容接口
 # ===============================================================
 ai_analysis:
-  enabled: true                    # 是否启用 AI 分析
+  enabled: false                    # 是否启用 AI 分析
 
   # AI 提供商配置
   # 支持的提供商:
