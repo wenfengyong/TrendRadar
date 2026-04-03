@@ -269,7 +269,7 @@ storage:
 # 支持 OpenAI、Anthropic、DeepSeek等兼容接口
 # ===============================================================
 ai_analysis:
-  enabled: true                    # 是否启用 AI 分析
+  enabled: false                    # 是否启用 AI 分析
 
   # AI 提供商配置
   # 支持的提供商:
